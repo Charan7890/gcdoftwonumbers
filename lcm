@@ -1,0 +1,22 @@
+m,n=input('enter two numbers:').split(' ')
+m,n=int(m),int(n)
+if m>n:
+    val=m
+else:
+    val=n
+if m==0 and n==0:
+    print('lcm:',m)
+elif m==0:
+    print('lcm:',n)
+elif n==0:
+    print('lcm:',m)
+else:
+    k=0
+    for i in range(m,val+1):
+        if m%i==0 and n%i==0:
+            k=i
+            break
+    if k==0:
+        print('lcm:',m*n)
+    else:
+        print('lcm:',k)
