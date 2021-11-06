@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+    int a[]={1,2,8,12,0,-5};
+    int len = sizeof(a)/sizeof(a[0]);
+    int max=a[0];
+    for(int i=1;i<len;i++){
+        if(max<a[i]){
+            max=a[i];
+        }
+    }
+    printf("The maximum element in the given array is:%d",max);
+    return 0;
+}
