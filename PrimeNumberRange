@@ -1,0 +1,37 @@
+#include<stdio.h>
+int palindrome(int n){
+	int s=0;
+	int copy=n;
+	while(n!=0){
+		int rem=n%10;
+		s=s*10+rem;
+		n=n/10;
+	}
+	if(copy==s)
+		return 1;
+	else
+		return 0;
+}
+		
+int main(){
+	int range;
+	scanf("%d",&range);
+	for(int i=2;i<=range;i++){
+		int flag=1;
+		for(int j=2;j*j<=i;j++){
+			if(i%j==0){
+				flag=0;
+				break;
+			}
+		}
+	int result;
+		if(flag){
+			result=palindrome(i);
+			if(result==1){
+		printf("%d is pal and prime\n",i);
+		
+	}
+		}
+}
+	return 0;
+}
